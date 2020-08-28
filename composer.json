@@ -19,12 +19,19 @@
             "Undjike\\CleanSmsNotificationChannel\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "undjike/cleansms": "^1.0"
     },
     "require-dev": {
         "orchestra/testbench": "^5.4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Undjike\\Undjike\\CleanSmsNotificationChannel\\CleanSmsServiceProvider"
+            ]
+        }
     }
 }

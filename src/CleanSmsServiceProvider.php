@@ -20,12 +20,12 @@ use Undjike\CleanSmsNotificationChannel\Channel\CleanSmsChannel;
 class CleanSmsServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap the application service.
+     * Register the application services.
      *
      * @return void
      * @noinspection PhpUnusedParameterInspection
      */
-    public function boot()
+    public function register()
     {
         Notification::resolved(function (ChannelManager $service) {
             $service->extend('cleansms', function ($app) {
@@ -33,11 +33,4 @@ class CleanSmsServiceProvider extends ServiceProvider
             });
         });
     }
-
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
-    public function register() {}
 }
