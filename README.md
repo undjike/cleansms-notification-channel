@@ -1,10 +1,10 @@
 <p align="center"><img src="https://my.cleansms.biz/assets/images/logo.png" alt="logo"></p>
 
 <p align="center">
-<a href="https://packagist.org/packages/undjike/cleansms"><img src="https://poser.pugx.org/undjike/cleansms/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/undjike/cleansms"><img src="https://poser.pugx.org/undjike/cleansms/license.svg" alt="License"></a>
-<a href="https://packagist.org/packages/undjike/cleansms"><img src="https://poser.pugx.org/undjike/cleansms/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/undjike/cleansms"><img src="https://poser.pugx.org/undjike/cleansms/dependents.svg" alt="Dependents"></a>
+<a href="https://packagist.org/packages/undjike/cleansms-notification-channel"><img src="https://poser.pugx.org/undjike/cleansms-notification-channel/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/undjike/cleansms-notification-channel"><img src="https://poser.pugx.org/undjike/cleansms-notification-channel/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/undjike/cleansms-notification-channel"><img src="https://poser.pugx.org/undjike/cleansms-notification-channel/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/undjike/cleansms-notification-channel"><img src="https://poser.pugx.org/undjike/cleansms-notification-channel/dependents.svg" alt="Dependents"></a>
 </p>
 
 ## Introduction
