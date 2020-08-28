@@ -1,0 +1,30 @@
+{
+    "name": "undjike/cleansms-notification-channel",
+    "description": "Laravel Notification Channel based on CleanSMS service",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ulrich Pascal Ndjike Zoa",
+            "email": "ndjikezoaulrich@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Undjike\\CleanSmsNotificationChannel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Undjike\\CleanSmsNotificationChannel\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "undjike/cleansms": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.4"
+    }
+}
