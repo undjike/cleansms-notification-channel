@@ -30,7 +30,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Undjike\\Undjike\\CleanSmsNotificationChannel\\CleanSmsServiceProvider"
+                "Undjike\\CleanSmsNotificationChannel\\CleanSmsServiceProvider"
             ]
         }
     }
