@@ -43,7 +43,7 @@ Once this is done, you can create your notification as usual.
 ```php
 <?php
 
-namespace Undjike\CleanSmsNotificationChannel\Tests\Unit;
+namespace App\Notifications;
 
 use Illuminate\Notifications\Notification;
 use Undjike\CleanSmsNotificationChannel\Channel\CleanSmsChannel;
@@ -68,7 +68,9 @@ class CleanSmsNotification extends Notification
      */
     public function toCleanSms($notifiable)
     {
-        return CleanSmsMessage::create()->body('Type here you message content...');
+        return CleanSmsMessage::create()
+            ->body('Type here you message content...')
+            ->transactional();
         // or return 'Type here you message content...';
     }
 }
@@ -76,6 +78,8 @@ class CleanSmsNotification extends Notification
 ```
 
 To get this stuff completely working, you need to add this
+to your notifiable model.
+
 
 ```php
     /**
@@ -88,8 +92,6 @@ To get this stuff completely working, you need to add this
         return $this->phone_number; // Can be a string or an array of valid phone numbers
     }
 ```
-
-to your notifiable model.
 
 Enjoy !!!
 

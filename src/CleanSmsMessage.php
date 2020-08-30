@@ -22,13 +22,22 @@ class CleanSmsMessage
     protected $body;
 
     /**
+     * Transactional message
+     *
+     * @var bool
+     */
+    private $transactional;
+
+    /**
      * CleanSmsMessage constructor.
      *
      * @param string $body
+     * @param bool $transactional
      */
-    public function __construct($body = '')
+    public function __construct($body = '', $transactional = true)
     {
         $this->body($body);
+        $this->transactional = $transactional;
     }
 
     /**
@@ -40,6 +49,38 @@ class CleanSmsMessage
     public static function create($body = '')
     {
         return new static($body);
+    }
+
+    /**
+     * Set message to transactional
+     *
+     * @return CleanSmsMessage
+     */
+    public function transactional()
+    {
+        $this->transactional = true;
+        return $this;
+    }
+
+    /**
+     * Message is transactional
+     *
+     * @return bool
+     */
+    public function isTransactional()
+    {
+        return $this->transactional;
+    }
+
+    /**
+     * Set message to not transactional
+     *
+     * @return CleanSmsMessage
+     */
+    public function campaign()
+    {
+        $this->transactional = false;
+        return $this;
     }
 
     /**

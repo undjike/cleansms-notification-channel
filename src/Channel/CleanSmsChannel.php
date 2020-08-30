@@ -28,12 +28,16 @@ class CleanSmsChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        if (!$recipient = $notifiable->routeNotificationFor('CleanSms')) return;
-
-        $message = $notification->toCleanSms($notifiable);
-
         try {
-            if ($message instanceof CleanSmsMessage) $content = $message->getBody();
+            if (!$recipient = $notifiable->routeNotificationFor('CleanSms'))
+                throw new Exception(__('Your notifiable instance does not have function routeNotificationForCleanSms.'));
+
+            $message = $notification->toCleanSms($notifiable);
+
+            if ($message instanceof CleanSmsMessage) {
+                $content = $message->getBody();
+                $transactional = $message->isTransactional();
+            }
             elseif (is_string($message)) $content = trim($message);
             else throw new Exception(__('Required string or CleanSmsMessage instance.'));
 
@@ -42,9 +46,13 @@ class CleanSmsChannel
             $result = CleanSms::create()
                 ->apiKey(config('services.cleansms.apikey'))
                 ->email(config('services.cleansms.email'))
-                ->sendSms($content, $recipient);
+                ->sendSms(
+                    $content,
+                    $recipient,
+                    isset($transactional) ? $transactional : true
+                );
 
-            if ((int) $result != 1) throw new Exception(__('Could not send the message.'));
+            if ($result != true) throw new Exception(__('Could not send the message.'));
         }
         catch (Exception $e) {
             throw CouldNotSendNotification::serviceRespondedWithAnError($e->getMessage());

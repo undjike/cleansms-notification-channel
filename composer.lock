@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76167095eac3c8fa8bcea33ce90f88d7",
+    "content-hash": "5ff90d63d14bf77563002abfd4e5417a",
     "packages": [
         {
             "name": "undjike/cleansms",
@@ -12,19 +12,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/undjike/cleansms.git",
-                "reference": "2c21c197dbf0034a86b5dbb1be26c72a43572b7e"
+                "reference": "40bdd32c178b51c8179aee3b51e4a6ef125a511b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/undjike/cleansms/zipball/2c21c197dbf0034a86b5dbb1be26c72a43572b7e",
-                "reference": "2c21c197dbf0034a86b5dbb1be26c72a43572b7e",
+                "url": "https://api.github.com/repos/undjike/cleansms/zipball/40bdd32c178b51c8179aee3b51e4a6ef125a511b",
+                "reference": "40bdd32c178b51c8179aee3b51e4a6ef125a511b",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*"
+                "ext-curl": "*",
+                "ext-json": "*"
             },
             "require-dev": {
-                "ext-json": "*",
                 "phpunit/phpunit": "^9.3"
             },
             "type": "library",
@@ -44,7 +44,7 @@
                 }
             ],
             "description": "Send SMS and manage your CleanSMS account.",
-            "time": "2020-08-27T13:12:21+00:00"
+            "time": "2020-08-30T20:40:29+00:00"
         }
     ],
     "packages-dev": [
